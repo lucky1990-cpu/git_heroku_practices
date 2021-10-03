@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<title>Page Title</title>
+</head>
+<body>
+    <div id ="user_serch">
+            <div id="userInfo_title">
+              <h4>User Information </h4>
+            </div>
+            
+            <div class="container">
+                <div class="row">
+                  <div class="col">
+                   <div class="user-text"><p>Name</p></div> 
+                   <div class="user-input">
+                     <input id="serchByName" onchange="onSerchByName()" placeholder="search with name ">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="user-text"><p>Phone</p></div> 
+                   <div class="user-input">
+                     <input id="searchByPhone" onchange="onSearchByPhone()" placeholder="search with phone no">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="user-text"><p>Email</p></div> 
+                    <div class="user-input">
+                      <input id="searchByEmail" onchange="onSearchByEmail()" placeholder="search with Email id">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="user-text"><p>Date</p></div> 
+                    <div class="user-input">
+                      <input id="searchByDate" onchange="onSearchByDate()" type="date">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="user-text"><p>Renewal Date</p></div> 
+                    <div class="user-input">
+                      <input id="searchByRenewal" type="date" onchange="onSearchByRenewalDate()">
+                    </div>
+                    
+                  </div>
+                  <div id="create_new_user" class="d-grid gap-2">
+                    <button type="button" onclick="onNewJoiner()" class="btn btn-primary">New Joiner</button>
+                  </div>
+                </div>
+              </div>
+    </div>
+
+    <div id="table_scroll">
+      <table id="user_header_data" class="table user_data">
+        <thead>
+          <tr id="user_table_row">
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Email Id</th>
+     
+            <th scope="col">Paid Date</th>
+            <th scope="col">Renewal Date</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+        
+        </tbody>
+      </table>
+      </div>
+
+  
+    
+      
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="/js/userDetails.js"></script>
+
+</body>
+</html>

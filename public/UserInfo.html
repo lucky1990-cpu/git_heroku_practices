@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<title>Page Title</title>
+</head>
+<body class="login_home_page">
+  <div id="navBackUsers"><img style="width: 5%;" src="img/back-icon-1.jpg"></div>
+   <div id="UserInfoMaindiv">
+     <div id="gymTitle">
+       <h3>Champion Gym</h3> 
+    </div>
+    <div>
+       <div id="UserInfoTitle"><h4 class="IUserNameHeader"></h4></div>
+      <div id ="userIcon"><img style = "width: 24px;" src="/img/user_icon.png"></div>
+    </div>
+    <div><hr></div>
+    <div id="userImgBox">
+      <img style="border-radius: 17px; width: 15%;" src="/img/girl.jpg">
+      
+      <div id="fileUpladContainer">
+       
+        <form action="/picUpload" enctype="multipart/form-data" method="post">
+          <div>
+         <div class="input-group input-group-sm mb-3">
+          <input type="text" id="_id"  name="_id" class="form-control" disabled>
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <input type="file"  name="avatar" class="form-control">
+            <input type="submit" value="File Upload">  
+          </div>
+        </div>
+                      
+          
+        </form>
+         <hr>
+       
+      </div>
+      
+
+      <div id="userNameJoinning">
+        <h4 id="IUserName"></h4>
+      <h4 id="IjoiningDate">01-12-2020</h4>
+      <h5>Golden Member</h5>
+        <h5>Work for Six pack</h5>
+    </div>
+    
+     </div>
+     
+     <div id="userInfoMainDiv">
+     <div id="UsderInfoDetailsData">
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Name</label>
+        <input type="text" placeholder="please enter name" class="form-control" id="iNameInp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Phone</label>
+        <input type="text" placeholder="please enter 10 degit mobile no" class="form-control" id="iPhoneInp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Email Id</label>
+        <input type="text" placeholder="please enter Email id" class="form-control" id="iEmailIdInp">
+      </div>
+   
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Paid Date</label>
+        <input type="date" class="form-control" id="iPaidDateInp">
+      </div>
+     
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Renewal Date</label>
+        <input type="date" class="form-control" id="iRenewalDateInp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Address</label>
+        <textarea class="form-control"   placeholder="please enter Address" id="iAddressInp"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Aadhar Card</label>
+        <input type="text" placeholder="please enter aadhar card no" class="form-control" id="iAadharInp">
+      </div>
+      
+      <div class="mb-3">
+        <button class="btn btn-primary form-control" id="newJoinerformSubmit1" onclick="onUpdateUserInfo()">Update 
+        </button> 
+      </div>
+       </div>
+       </div>
+     
+
+
+
+
+
+
+
+   </div>
+   
+    
+   
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="/js/userInfo.js"></script>
+
+</body>
+</html>
