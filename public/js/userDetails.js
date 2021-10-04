@@ -36,7 +36,7 @@ $('#user_header_data').on('click', 'tr', (e)=>{
  })
 
  const _fnGetUserInfo= ((aUserData,callback)=>{
-   if(!aUserData.ID){
+   if(aUserData.ID=="ID"){
      return
    }
   localStorage.setItem("ID", aUserData.ID);
