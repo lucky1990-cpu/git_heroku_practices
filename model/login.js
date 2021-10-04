@@ -23,21 +23,21 @@ const login =  mongoose.model('login_Data',
 }
 )
 
-// Create Insitance of DB
+//Create Insitance of DB
 
-// const me = new login( 
-//     {
-//         name:'Lucky',
-//         Mobile:30,
-//         Email:'chouhanluckysap@gmail.com',
-//         password:'124342334'
+const me = new login( 
+    {
+        name:'Lucky',
+        Mobile:30,
+        Email:'chouhanluckysap@gmail.com',
+        password:'124342334'
 
-// })
+})
 
-// me.save().then(()=>{
-//     console.log(me)
-// }).catch((error)=>{
-//   console.log("Error", error);
-// })
+me.save().then(()=>{
+    console.log(me)
+}).catch((error)=>{
+  console.log("Error", error);
+})
 
 module.exports = login

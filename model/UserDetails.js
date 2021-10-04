@@ -22,21 +22,21 @@ const UserDetails =  mongoose.model('UsersDetails',
 }
 )
 
-// const me = new UserDetails( 
-//     {
-//         name:'Rehaan',
-//         Mobile:9999349,
-//         Email:'chouhanluckysap@gmail.com',
-//         Address:'patna',
-//         AadharNumber:'121232',
-//         joiningDate:'01-12-1990',
-//         PaidDate:'01-12-1990',
-//         RenewalDate:'01-12-1990'
-// })
+const me = new UserDetails( 
+    {
+        name:'Rehaan',
+        Mobile:9999349,
+        Email:'chouhanluckysap@gmail.com',
+        Address:'patna',
+        AadharNumber:'121232',
+        joiningDate:'01-12-1990',
+        PaidDate:'01-12-1990',
+        RenewalDate:'01-12-1990'
+})
 
-// me.save().then(()=>{
-//     console.log(me)
-// }).catch((error)=>{
-//   console.log("Error", error);
-// })
+me.save().then(()=>{
+    console.log(me)
+}).catch((error)=>{
+  console.log("Error", error);
+})
 module.exports = UserDetails
