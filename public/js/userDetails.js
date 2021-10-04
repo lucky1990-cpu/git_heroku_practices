@@ -36,6 +36,9 @@ $('#user_header_data').on('click', 'tr', (e)=>{
  })
 
  const _fnGetUserInfo= ((aUserData,callback)=>{
+   if(!aUserData.ID){
+     return
+   }
   localStorage.setItem("ID", aUserData.ID);
     window.location.href='/UserInfo.html'
  })
