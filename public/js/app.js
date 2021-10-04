@@ -16,7 +16,6 @@ function mySignInFunction(e){
     return
 
    }
-   
    window.location.href='/user.html'
   })
 
