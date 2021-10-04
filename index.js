@@ -63,6 +63,8 @@ io.on('connection',(socket)=>{
         console.log(oNewUser)
       }
       catch(e){
+        callback(e)
+
          console.log(e)
       }
     })
