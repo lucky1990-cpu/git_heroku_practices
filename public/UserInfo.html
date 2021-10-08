@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" href="/css/style.css">
-        <!-- Required meta tags -->
+      
         <meta charset="utf-8">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -31,15 +31,24 @@
         <form action="/picUpload" enctype="multipart/form-data" method="post">
           <div>
          <div class="input-group input-group-sm mb-3">
-          <input type="text" id="_id"  name="_id" class="form-control" disabled>
+          <input type="text" id="_id"  name="fileID" class="form-control">
           </div>
           <div class="input-group input-group-sm mb-3">
             <input type="file"  name="avatar" class="form-control">
             <input type="submit" value="File Upload">  
           </div>
         </div>
-                      
-          
+        </form>
+
+        <form action="/getImage" enctype="multipart/form-data" method="GET">
+          <div>
+         <div class="input-group input-group-sm mb-3">
+          <input type="text" class="_id"  name="fileID" class="form-control">
+          </div>
+          <div class="input-group input-group-sm mb-3">
+            <input type="submit" value="Get Image">  
+          </div>
+        </div>
         </form>
          <hr>
        
@@ -94,23 +103,119 @@
       </div>
        </div>
        </div>
-     
-
-
-
-
-
-
-
    </div>
-   
-    
-   
-
 
       <script src="http://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
       <script src="/socket.io/socket.io.js"></script>
       <script src="/js/userInfo.js"></script>
+
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<link rel="stylesheet" href="/css/style.css">
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="http://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+</head>
+<body>
+
+<div data-role="page" class="userInfoPage">
+
+  <div data-role="header" class="pageone">
+    <!-- <div>
+      <button id="navBackUsers" class="ui-btn" data-rel="back">back</button>
+    </div> -->
+  
+    <img  id="navBackUsers" style="width: 5%;" src="img/back-icon-1.jpg">
+   
+  </div>
+
+  <div data-role="main" class="ui-content">
+
+    <div class="ui-grid-solo ui-responsive headerShadow" >
+     <div class="ui-block-a" >
+      <img style="border-radius: 28px; width: 29%;" src="/img/girl.jpg">
+     </div>
+     <div id="userHeader">
+       <h2 id="IUserName"></h2>
+       <span id="_id"></span>
+       <h3 id="IjoiningDate"></h3>
+       <h4 class="mobNo"><h4>
+     </div>
+    </div>
+    <hr>
+    <div class="ui-grid-solo">
+      <div class="mb-3">
+        <label for="UseUpdateName" class="form-label">Name</label>
+        <input type="text" placeholder="please enter name" class="form-control" id="iNameInp">
+      </div>
+
+      <div class="mb-3">
+        <label for="UseUpdateFatherName" class="form-label">Father Name</label>
+        <input type="text" placeholder="please enter father name" class="form-control" id="iFatherNameInp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Phone</label>
+        <input type="text" placeholder="please enter 10 degit mobile no" class="form-control" id="iPhoneInp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Email Id</label>
+        <input type="text" placeholder="please enter Email id" class="form-control" id="iEmailIdInp">
+      </div>
+   
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Paid Date</label>
+        <input type="date" class="form-control" id="iPaidDateInp">
+      </div>
+     
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Renewal Date</label>
+        <input type="date" class="form-control" id="iRenewalDateInp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Address</label>
+        <textarea class="form-control"   placeholder="please enter Address" id="iAddressInp"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Aadhar Card</label>
+        <input type="text" placeholder="please enter aadhar card no" class="form-control" id="iAadharInp">
+      </div>
+      
+      <div class="mb-3">
+        <button class="btn btn-primary form-control" id="NewJoinerLink" onclick="onUpdateUserInfo()">Update 
+        </button> 
+      </div>
+  </div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<script src="http://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/userInfo.js"></script>
 
 </body>
 </html>

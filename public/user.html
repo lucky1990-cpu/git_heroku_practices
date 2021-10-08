@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" href="/css/style.css">
-        <!-- Required meta tags -->
+       
         <meta charset="utf-8">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -87,4 +87,89 @@
       <script src="/js/userDetails.js"></script>
 
 </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link rel="stylesheet" href="/css/style.css">
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="http://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+</head>
+<body>
+
+<div data-role="page" class="userInfoPage" >
+  <div data-role="header" class="pageone">
+    <h1>User Details</h1>
+  </div>
+
+
+  <div data-role="main" class="ui-content">
+   
+
+    <div data-role="collapsible">
+      <h1>Search User Details</h1>
+       <label for="serchByName">Name:</label>
+    
+       <input id="serchByName" autocomplete="off" onchange="onSerchByName()" placeholder="search with name ">
+
+    <label for="searchByPhone">Mob No:</label>
+
+    <input id="searchByPhone" autocomplete="off" onchange="onSearchByPhone()" placeholder="search with phone no">
+
+    <label for="searchByEmail">E-mail:</label>
+    <input id="searchByEmail" autocomplete="off" onchange="onSearchByEmail()" placeholder="search with Email id">
+    <label for="searchByDate">Paid Date:</label>
+    <input id="searchByDate"  autocomplete="off" onchange="onSearchByDate()" type="date">
+    <label for="searchByRenewal">Renewal Date:</label>
+    <input id="searchByRenewal" autocomplete="off"  type="date" onchange="onSearchByRenewalDate()">
+    </div>
+
+    
+    
+    <table data-role="table"   class="ui-responsive table user_data" id="user_header_data" >
+      <thead>
+        <tr >
+         
+          <th >Name</th>
+          <th >Phone</th>
+          <th >Email Id</th>
+          <th >Paid Date</th>
+          <th >Renewal Date</th>
+          <th >ID</th>
+        </tr>
+      </thead>
+      <tbody>
+      
+      </tbody>
+    </table>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+       <li  ><a id="NewJoinerLink"  onclick="onNewJoiner()" href="#anylink">New Joiner</a></li>
+      </ul>
+      
+   </div>
+  </div> 
+ 
+  <script src="http://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="/js/userDetails.js"></script>
+
+</body>
+
 </html>

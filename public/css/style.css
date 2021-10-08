@@ -9,12 +9,16 @@ margin-top: 6%;
 font-family: emoji;
 }
 .container_new{
-    width: 35%;
+    /* width: 35%;
     background: white;
     position: fixed;
     margin-left: 33%;
     margin-top: 6%;
-    border: 1.5px solid #0f1447;
+    border: 1.5px solid #0f1447; */
+
+   
+    margin-top: 51%;
+    color: white;
 }
 
 .login_input{
@@ -24,6 +28,7 @@ font-family: emoji;
 #emailHelp{
     margin-top: 12%;
     margin-left: 25%;
+    color: white;
 }
 .space{
     margin-top: 8%;
@@ -36,9 +41,9 @@ font-family: emoji;
 }
 
 .user_data{
-    margin-top: 17%;
-    position: absolute;
-    background-image: linear-gradient(#9fa0a103, #50535373);
+   
+    border: 2px solid;
+    border-style: inset;
   
 }
 .user-input{
@@ -66,7 +71,7 @@ font-family: emoji;
     width: 15%;
     position: absolute;
 }
-#new_joiner_form{
+/* #new_joiner_form{
     width: 42%;
     margin-left: 28%;
     margin-top: -4%;
@@ -77,7 +82,7 @@ font-family: emoji;
     position: absolute;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-}
+} */
 #form_paddding{
     width: 77%;
     margin-left: 12%;
@@ -88,8 +93,9 @@ font-family: emoji;
     background-size: cover;
 }
 #reg_titile{
-    margin-left: 32%;
-    margin-top:4%;
+    margin-left: 27%;
+    margin-top: 4%;
+    color: white;
 }
 #table_scroll{
     overflow: auto;
@@ -160,4 +166,37 @@ font-family: emoji;
 
 #fileUpladContainer{
     width: 15%;
+}
+#NewJoinerLink{
+    
+    /* background-color: #0d6efd;
+    border-color: #0d6efd; */
+    background-image: linear-gradient(#0b6bf8, #1e4f9a);
+    color: #f8f9fa;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.tablerow{
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 2px 5px #382b17;
+}
+.pageone{
+    background-image: linear-gradient(#131921, #afaf6f);
+    color: ghostwhite;
+    font-family: emoji;
+}
+
+#userHeader{
+    margin-top: -39%;
+    margin-left: 33%;
+    position: absolute;
+
+}
+.headerShadow{
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+.userInfoPage{
+    font-family: emoji;
+    background-color: white;
 }

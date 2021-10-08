@@ -16,19 +16,24 @@
     <form action="/NewJoiner.html" target="_self">
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" for="JoinerName">Name</span>
-            <input type="text"  placeholder="please enter name"  id="JoinerName" name="fname" class="form-control"  required>
+            <input type="text" autocomplete="off"  placeholder="please enter name"  id="JoinerName" name="fname" class="form-control"  required>
+          </div>
+
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" for="FatherName">Father Name</span>
+            <input type="text" autocomplete="off"  placeholder="please enter father name"  id="JoinerFatherName" name="FatherName" class="form-control"  required>
           </div>
           <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing-sm">Phone</span>
-            <input type="text" required placeholder="plaese enter 10 digit mob no"  id="JoinerPhone" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            <input type="text" autocomplete="off" required placeholder="plaese enter 10 digit mob no"  id="JoinerPhone" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
           </div>
           <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing-sm">Email id</span>
-            <input type="text" required placeholder="please enter Email id" id="JoinerEmail" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            <input type="text" autocomplete="off" required placeholder="please enter Email id" id="JoinerEmail" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
           </div>
           <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing-sm">Joining Date</span>
-            <input  type="date"  required id="JoinerJoiningDate" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            <input  type="date" autocomplete="off"  required id="JoinerJoiningDate" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
           </div>
           <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing-sm">Paid Date</span>
@@ -40,11 +45,11 @@
           </div>
           <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing-sm">Address</span>
-            <textarea class="form-control" required  id="JoinerAddress" placeholder="please enter address" ></textarea>
+            <textarea class="form-control" autocomplete="off" required  id="JoinerAddress" placeholder="please enter address" ></textarea>
           </div>
           <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing-sm">Aadhar Card No</span>
-            <input type="text" id="JoinerAadharCard" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            <input type="text" autocomplete="off" id="JoinerAadharCard" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
           </div>
          
          
@@ -58,6 +63,8 @@
     
       </div>
     </div>
+
+    
 <script src="http://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 <script src="/socket.io/socket.io.js"></script>
 <script src="/js/newJoiner.js"></script>

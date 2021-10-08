@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link rel="stylesheet" href="/css/style.css">
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<link href="http://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+<body>
+<div data-role="page">
+  
+  <div data-role="header">
+    <h1>Welcome To My Homepage</h1>
+    <!-- <a href="#" class="ui-btn ui-icon-home ui-btn-icon-right">Home</a>
+    <a href="#" class="ui-btn ui-icon-search ui-btn-icon-left">Search</a> -->
+    <div data-role="navbar">
+        <ul>
+          <li><a href="#" data-icon="home">Home</a></li>
+          <li><a href="#" data-icon="arrow-r">Page Two</a></li>
+          <li><a href="#" data-icon="search">Search</a></li>
+        </ul>
+      </div>
+  </div>
+
+  <div data-role="main" class="ui-content">
+
+    <div data-role="collapsible">
+        <h1>Click me - I'm collapsible!</h1>
+        <p>I'm the expanded content.</p>
+      </div>
+
+      <form class="ui-filterable">
+        <input id="myFilter" data-type="search">
+      </form>
+
+      <form method="post" action="demoform.asp">
+        <div class="ui-field-contain">
+          <label for="fname">First name:</label>
+          <input type="text" name="fname" id="fname">
+          <label for="lname">Last name:</label>
+          <input type="text" name="lname" id="lname">
+        </div>
+        <input type="submit" data-inline="true" value="Submit">
+      </form>
+      <ul data-role="listview" data-filter="true" data-input="#myFilter" data-autodividers="true" data-inset="true">
+        <li><a href="#">Adele</a></li>
+        <li><a href="#">Agnes</a></li>
+        <li><a href="#">Albert</a></li>
+        <li><a href="#">Billy</a></li>
+        <li><a href="#">Bob</a></li>
+        <li><a href="#">Calvin</a></li>
+        <li><a href="#">Cameron</a></li>
+        <li><a href="#">Chloe</a></li>
+        <li><a href="#">Christina</a></li>
+        <li><a href="#">Diana</a></li>
+        <li><a href="#">Gabriel</a></li>
+        <li><a href="#">Glen</a></li>
+        <li><a href="#">Ralph</a></li>
+        <li><a href="#">Valarie</a></li>
+      </ul>
+
+      <ul data-role="listview" data-inset="true">    
+        <li><a href="#">Default is right arrow</a></li>
+        <li data-icon="plus"><a href="#">data-icon="plus"</a></li>
+        <li data-icon="minus"><a href="#">data-icon="minus"</a></li>
+        <li data-icon="delete"><a href="#">data-icon="delete"</a></li>
+        <li data-icon="location"><a href="#">data-icon="location"</a></li>   
+        <li data-icon="false"><a href="#">data-icon="false"</a></li>
+      </ul>
+
+      <h2>A standard list:</h2>
+    <ul data-role="listview">
+      <li><a href="#">List Item</a></li>
+      <li><a href="#">List Item</a></li>
+      <li><a href="#">List Item</a></li>
+    </ul><br>
+    <h2>List with data-inset="true":</h2>
+    <ul data-role="listview" data-inset="true">
+      <li><a href="#">List Item</a></li>
+      <li><a href="#">List Item</a></li>
+      <li><a href="#">List Item</a></li>
+    </ul>
+
+      <table data-role="table" class="ui-responsive">
+        <thead>
+          <tr>
+            <th>CustomerID</th>
+            <th>CustomerName</th>
+            <th>ContactName</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>PostalCode</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Obere Str. 57</td>
+            <td>Berlin</td>
+            <td>12209</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Antonio Moreno Taquer�a</td>
+            <td>Antonio Moreno</td>
+            <td>Mataderos 2312</td>
+            <td>M�xico D.F.</td>
+            <td>05023</td>
+            <td>Mexico</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Around the Horn</td>
+            <td>Thomas Hardy</td>
+            <td>120 Hanover Sq.</td>
+            <td>London</td>
+            <td>WA1 1DP</td>
+            <td>UK</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Berglunds snabbk�p</td>
+            <td>Christina Berglund</td>
+            <td>Berguvsv�gen 8</td>
+            <td>Lule�</td>
+            <td>S-958 22</td>
+            <td>Sweden</td>
+          </tr>
+        </tbody>
+      </table>
+  
+    
+    <p>I Am Now A Mobile Developer!!</p>
+     <p>Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..</p>
+      <p>Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..</p>
+       <p>Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..Some text to enable scrolling..</p>
+     
+
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <a href="#myPopup" data-rel="popup"  data-arrow="l" data-transition="fade"  class="ui-btn ui-btn-inline ui-corner-all">Show Popup</a>
+    
+    <div data-role="popup" id="myPopup">
+      <p>This is a simple popup.</p>
+    </div>
+  </div>
+
+
+
+  <div data-role="footer" data-position="inline" style="text-align:center;">
+    
+    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Add Me On Facebook</a>
+    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-right">Add Me On Twitter</a>
+    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Add Me On Instagram</a>
+  </div>
+</div> 
+
+</body>
+</html>

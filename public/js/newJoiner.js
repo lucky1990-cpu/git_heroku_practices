@@ -4,6 +4,7 @@ function onSubmitNewJoiner(){
     
     const userObj = {
         name: document.getElementById('JoinerName').value.toUpperCase(),
+        FatherName: document.getElementById('JoinerFatherName').value.toUpperCase(),
         Mobile:document.getElementById('JoinerPhone').value,
         Email:document.getElementById('JoinerEmail').value.toUpperCase(),
         joiningDate:document.getElementById('JoinerJoiningDate').value,
@@ -13,7 +14,7 @@ function onSubmitNewJoiner(){
         AadharNumber:document.getElementById('JoinerAadharCard').value
        //Photo:document.getElementById('JoinerPhoto')
     }
-    if(!userObj.name && !userObj.Mobile && !userObj.Email && !userObj.joiningDate && !userObj.PaidDate && !userObj.RenewalDate && !userObj.Address){
+    if(!userObj.name && !userObj.FatherName && !userObj.Mobile && !userObj.Email && !userObj.joiningDate && !userObj.PaidDate && !userObj.RenewalDate && !userObj.Address){
       alert('All field is mandatory Please fill all field')
       return
     }
@@ -22,6 +23,7 @@ function onSubmitNewJoiner(){
 socket.emit('NewJoiner',userObj,(data)=>{
     if(data){
         console.log(data)
+       
         alert('User Create successfully')
         document.querySelector('#newJoinerformSubmit').disabled=false
         _fnClearform()

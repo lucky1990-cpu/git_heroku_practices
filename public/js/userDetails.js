@@ -9,13 +9,23 @@ socket.emit('UsersDetails',(data)=>{
 
 const _fnUserHeaderData = ((data)=>{
   if(data){
-    //let img = '<img src="../img/User_icon.png"  style ="width: 5%"/>';
+
+  
       let rows=""
       data.forEach((items)=>{
-        rows += "<tr><td>"+items._id+"</td><td>"+items.name+"</td><td>"+items.Mobile+"</td><td>"+items.Email+"</td><td>"+items.PaidDate+"</td><td>"+items.RenewalDate+"</td></tr>"
+        rows += "<tr><td>"+items.name+"</td><td>"+items.Mobile+"</td><td>"+items.Email+"</td><td>"+items.PaidDate+"</td><td>"+items.RenewalDate+"</td><td>"+items._id+"</td></tr>"
+        
       })
+
+    
  
       $( rows ).appendTo("#user_header_data tbody");
+      var s = document.getElementById('user_header_data')
+      var t = s.getElementsByTagName("tr");
+      for(let i=1;i<t.length;i++){
+        t[i].className ="tablerow"
+      }
+      
   }
   
 
@@ -26,11 +36,12 @@ const _fnUserHeaderData = ((data)=>{
 $('#user_header_data').on('click', 'tr', (e)=>{
   let aTdDetaisl = e.currentTarget.cells;
    let aUserData = {
-   ID:e.currentTarget.cells[0].innerText,
+   Name:e.currentTarget.cells[0].innerText,
    phone:e.currentTarget.cells[1].innerText,
    Email:e.currentTarget.cells[2].innerText,
    PaidDate:e.currentTarget.cells[3].innerText,
-   ReniewalDate: e.currentTarget.cells[4].innerText
+   ReniewalDate: e.currentTarget.cells[4].innerText,
+   ID:e.currentTarget.cells[5].innerText
 } 
    _fnGetUserInfo(aUserData)
  })

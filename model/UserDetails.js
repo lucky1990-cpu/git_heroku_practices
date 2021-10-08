@@ -3,6 +3,7 @@ const validator = require('validator')
 const UserDetails =  mongoose.model('UsersDetails',
 {
     name:{type:String ,  trim :true},
+    FatherName:{type:String},
     Mobile:{type :Number, default:0, validate(value){
       if(value<0){
        throw new Error("Negitive age is not allowed")
@@ -18,7 +19,7 @@ const UserDetails =  mongoose.model('UsersDetails',
     joiningDate:{type:String,required:true},
     PaidDate:{type:String,required:true},
     RenewalDate:{type:String,required:true},
-    avatar:{type:Buffer}
+
 }
 )
 

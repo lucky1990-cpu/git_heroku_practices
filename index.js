@@ -5,33 +5,97 @@ const express = require('express')
 const app = express()
 const server = http.createServer(app)
 const io =  sockotio(server)
+const fs = require('fs');
 require('./db/mongo')
 const login = require('./model/login')
+const {MongoClient ,  ObjectId } = require('mongodb')
+
 const UserDetails = require('./model/UserDetails')
+const fileUpload =  require('./model/fileUpload')
 const multer = require('multer')
-const { ObjectId } = require('bson')
+//const { ObjectId } = require('bson')
 const PublicDirectoryPath = path.join(__dirname,'./public')
 app.use(express.static(PublicDirectoryPath))
 app.use(express.json()) 
 //app.use(userRoute)
+
+app.set('view engine','hbs');
+// Set 'views' directory for any views 
+// being rendered res.render()
+app.set('views', path.join(__dirname, './views'));
+
+
+
+app.get('/signIn',(req,res)=>{
+  fs.readFile('public/SignIn.html',(err,data)=>{
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write(data);
+    return res.end();
+  })
+
+})
+
+ app.get('/about',(req, res)=>{
+     res.render('Sign',{
+         firstName:'Lucky',
+         lastName:'chauhan'
+     });
+
+ })
+ app.get('/userDetails',(req, res)=>{
+  res.render('UserDetails',{
+      firstName:'Lucky',
+      lastName:'chauhan'
+  });
+
+})
+  
 
 const upload  = multer({
 
 })
 
 app.post("/picUpload", upload.single('avatar'), async(req,res)=>{
-    console.log(req.file.buffer)
-    console.log(req.file)
     console.log(req.body)
-    // const oNewUser1  = new UserDetails(req.file.buffer)
-    // try{
-    //   await oNewUser1.save()
-    //   callback(oNewUser1)
-    //   console.log(oNewUser1)
-    // }
-    // catch(e){
-    //    console.log(e)
-    // }
+    console.log('id which coming from ui',req.body.fileID)
+      const id =  req.body.fileID
+      //console.log("id is",id)
+      const value = { 
+        file_id:id,
+        avatar:req.file.buffer
+      }
+      console.log(value)
+
+      const fileData = new fileUpload(value);
+
+      try{
+        await fileData.save()
+        res.set('Content-Type','image/jpg')
+        res.send(fileData.avatar)
+        //console.log(fileData)
+        
+       }
+       catch(e){
+         console.log(e)
+       }
+})
+
+app.get('/getImage',async(req,res)=>{
+  
+  
+  //const Picid =  new ObjectId(req.query.fileID)
+  console.log(req.query.fileID)
+  try{
+    const userGetPic = await fileUpload.findById({_id: new ObjectId("615c9736cd6860e160b51315")})
+    res.set('Content-Type','image/jpg')
+        res.send(userGetPic.avatar)
+        //res.render('public/UserInfo.html',userGetPic.avatar)
+        console.log(userGetPic.avatar)
+
+  }catch(e){
+    console.log(e)
+  }
+
 })
 io.on('connection',(socket)=>{
     console.log('connection establish between client and server')
