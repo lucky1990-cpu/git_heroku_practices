@@ -33,6 +33,7 @@ socket.emit('NewJoiner',userObj,(data)=>{
 }
 function _fnClearform(){
     document.getElementById('JoinerName').value=''
+    document.getElementById('JoinerFatherName').value=''
     document.getElementById('JoinerPhone').value=''
     document.getElementById('JoinerEmail').value=''
     document.getElementById('JoinerJoiningDate').value=''
